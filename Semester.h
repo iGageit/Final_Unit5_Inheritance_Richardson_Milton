@@ -21,8 +21,8 @@ class Semester
         //user changeable settings default values
         hoursTheStudentTakes = 0; //ft 12, pt 9, ht 6
         hoursInTheDegree = 60; 
-        schoolName = "TCC"; 
-        costPerCreditHour = 64.00; 
+        schoolName = "DeVry"; 
+        costPerCreditHour = 514.00; 
         bookCostsPerClass = 100.00;
         roomAndBoardCosts = 1000.00; 
         foodCostsPerMonth = 150.00; 

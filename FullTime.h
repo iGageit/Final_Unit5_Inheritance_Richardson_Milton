@@ -1,7 +1,7 @@
 void fullTime()
 {
-
-  cout << bold_on <<  "\nFull Time Students " << bold_off << endl;
+color = "\x1b[" + to_string(94) + ";1m";
+  cout << color << bold_on <<  "\nFull Time Students " << bold_off << reset << endl;
 
 
   const int hoursAFullTimeStudent = 12;
@@ -12,40 +12,41 @@ void fullTime()
   double answer;
   // Ask for cost per credit 
 cout << "What is the Cost per credit hour? " << endl; 
-cin >> answer; 
+answer = validateDouble(answer);
 ftTCC.setcostPerCreditHour(answer);
 //cout << ftTCC.getcostPerCreditHour() << endl; 
 
 
  // ask for cost for Books
  cout <<  "What is the Book Cost per Class? " << endl; 
-cin >> answer; 
+answer = validateDouble(answer);
 ftTCC.setbookCostsPerClass(answer);
 //cout << ftTCC.getbookCostsPerClass() << endl; 
 
 // Ask for the Room and board.
    cout <<  "What is the Room and Board Cost Per Month? " << endl; 
-cin >> answer; 
+answer = validateDouble(answer);
 ftTCC.setroomAndBoardCosts(answer);
 
 // Ask for the Food Cost Per Month
    cout <<  "What is the Food Cost Per Month? " << endl; 
-cin >> answer; 
+answer = validateDouble(answer);
 ftTCC.setfoodCostsPerMonth(answer);
 
 //ask for the Travel time
    cout <<  "What is the Travel Costs Per Month? " << endl; 
-cin >> answer; 
+answer = validateDouble(answer);
 ftTCC.settravelCostsPerMonth(answer);
 
 
 
 
 // Total result of all input
-
- cout << bold_on <<  "\nFull Time Students " << bold_off << endl;
+color = "\x1b[" + to_string(94) + ";1m";
+ cout << bold_on << color << "\nFull Time Students " << bold_off << reset << endl;
+ color = "\x1b[" + to_string(92) + ";1m";
 // full Tuition price
-  cout << "Tuition: " << ftTCC.calculateTuition() << endl; 
+  cout << color << "Tuition: " << ftTCC.calculateTuition() << endl; 
 
   // Full Time Books
 cout << "Books: " << ftTCC.calculateBooks() << endl;
@@ -62,5 +63,7 @@ cout << "Food: " << ftTCC.calculateFood() << endl;
 
 
 // Total semester
-cout << "Semester cost: " << ftTCC.calculateSamesterCosts() << endl; 
+cout << "Semester cost: " << ftTCC.calculateSamesterCosts() << reset << endl; 
+
+
 }

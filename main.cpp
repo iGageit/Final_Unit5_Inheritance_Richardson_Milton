@@ -9,8 +9,14 @@
 
 int main() 
 {
-int option = 0;
-  cout << "What Student are you? \n" << endl; 
+  int option = 0;
+  int counter = 0;
+   char Exit = 0 ;
+  do
+  {
+
+color = "\x1b[" + to_string(93) + ";1m";
+  cout << color << "\nWhat Student are you? \n" << reset << endl; 
   cout << "1. Full Time " << endl; 
   cout << "2. Part Time " << endl; 
   cout << "3. Half Time " << endl;
@@ -24,17 +30,20 @@ option = validateInt(option);
 		} else if (option == 3) {
 		halfTime();
     } 
-    else if ( option == 4)
-      {
-cout << "Thats all folks"  << endl; 
-      }
     else {
 			cout << "\nError Something went wrong!" << endl;
-		option = validateInt(option);
+	option = validateInt(option);
 		}
 
-
-  return 0; 
+color = "\x1b[" + to_string(96) + ";1m";
+cout << color << "\nWould you like to start over? ";
+    cout << "Click any button to Repeat or E to Exit: " << reset ;
+    cin >> Exit;
+    cout << "\033[2J\033[1;1H"; //Clear Screen / Refresh
+    counter++;//counts program loops/runs 
+  }while(Exit != 'e' && option != 'E'); 
+cout << "\033[2J\033[1;1H"; 
+    return 0; 
 }
 
 
