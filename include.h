@@ -5,4 +5,14 @@
 #include <ios>
 #include<math.h>
 #include<algorithm>
-using namespace std; 
+using namespace std;
+// make text bold 
+std::ostream& bold_on(std::ostream& os)
+{
+    return os << "\e[1m";
+}
+
+std::ostream& bold_off(std::ostream& os)
+{
+    return os << "\e[0m";
+}

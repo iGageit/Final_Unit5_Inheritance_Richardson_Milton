@@ -35,11 +35,18 @@ class Semester
     bookCostsPerClass(bCPC), roomAndBoardCosts(rABC),
     foodCostsPerMonth(fCPM), travelCostsPerMonth(tCPM)
     { }
-    void setHoursAStudentTakes(int h) { hoursTheStudentTakes = h; }
+  
+  void setHoursAStudentTakes(int h) { hoursTheStudentTakes = h; }
     int getHoursAStudentTakes() const { return hoursTheStudentTakes; }
+
 
     void setcostPerCreditHour(int c) { costPerCreditHour = c; }
     int getcostPerCreditHour() const { return costPerCreditHour; }
+
+    void setbookCostsPerClass(int b) { bookCostsPerClass = b; }
+    int getbookCostsPerClass() const { return bookCostsPerClass; }
+
+    
 
 
     //write setters and getters for the other non constant member varibles 
