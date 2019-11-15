@@ -9,13 +9,29 @@
 
 int main() 
 {
-  // make a menu here
-fullTime();
-//partTime();
-//halfTime();
+int option = 0;
+  cout << "What Student are you? \n" << endl; 
+  cout << "1. Full Time " << endl; 
+  cout << "2. Part Time " << endl; 
+  cout << "3. Half Time " << endl;
+option = validateInt(option);
 
 
-
+  if (option == 1) {
+		fullTime();
+		} else if (option == 2) {
+			partTime();
+		} else if (option == 3) {
+		halfTime();
+    } 
+    else if ( option == 4)
+      {
+cout << "Thats all folks"  << endl; 
+      }
+    else {
+			cout << "\nError Something went wrong!" << endl;
+		option = validateInt(option);
+		}
 
 
   return 0; 

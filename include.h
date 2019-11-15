@@ -16,3 +16,5 @@ std::ostream& bold_off(std::ostream& os)
 {
     return os << "\e[0m";
 }
+string color = "";
+    string reset = "\x1b[m";

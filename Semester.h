@@ -46,8 +46,14 @@ class Semester
     void setbookCostsPerClass(int b) { bookCostsPerClass = b; }
     int getbookCostsPerClass() const { return bookCostsPerClass; }
 
-    
+     void setroomAndBoardCosts(int r) { roomAndBoardCosts = r; }
+    int getroomAndBoardCosts() const { return roomAndBoardCosts; }
 
+      void setfoodCostsPerMonth(int f) { foodCostsPerMonth = f; }
+    int getfoodCostsPerMonth() const { return foodCostsPerMonth; }
+
+   void settravelCostsPerMonth(int t) { travelCostsPerMonth = t; }
+    int gettravelCostsPerMonth() const { return travelCostsPerMonth; }
 
     //write setters and getters for the other non constant member varibles 
 
